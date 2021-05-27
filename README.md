@@ -4,6 +4,20 @@
 
 This sample demonstrates a React single-page application (SPA) calling .Net Core Web API which in turns calls another .Net Core Downstream API
 
+## How will work
+
+SPA react application uses Oath Authorization Code flow with PKCE.
+SPA uses MSAL library.
+1. SPA app will initially make requests to endpoint https://login.microsoftonline.com/{TenantId}/oauth2/v2.0/authorize to get authorization code. 
+2. The client sends the authorization request along with the code_challenge and the code_challenge_method.
+3. The Authorisation Server makes note of the code_challenge and the code_challenge_method and issues an authz code.
+4. Once authorization code is recieved library will make call to token endpoint to get access token using https://login.microsoftonline.com/{tenantid}/oauth2/v2.0/token During this call It will send code recieved from first request along with request.
+5. The client sends an access token request along with the code_verifier.
+6. The Authorization Server validates the code_verifier with the already received code_challenge and the code_challenge_method and issues an access token if the validation is successful.
+
+
+
+
 ## Register the downstream web API (msal-.net core-downstream) ##
 
 1. Navigate to the Azure portal and select the Azure AD service.
