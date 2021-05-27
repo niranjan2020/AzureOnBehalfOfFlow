@@ -114,3 +114,21 @@ replace client id with clientId of msal-react-spa
 authority as {https://login.microsoftonline.com/tenantid}
 
 Under apiHello replace scope with api://{clientid of msal-react-middletier}/access_as_user 
+
+## How to Run ##
+
+Navigate to OnBehalfOfFlow/spa
+
+Run below commands
+
+npm install 
+set HTTPS=true
+npm start
+
+In Authconfig.js pls add port of middletier api in endpoint section
+
+Run NetCoreAPI and downStreamAPI using IIS Express
+
+In NetcoreAPI pls add port of Downstream API in endpoint section
+
+
