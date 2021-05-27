@@ -4,7 +4,7 @@
 
 This sample demonstrates a React single-page application (SPA) calling .Net Core Web API which in turns calls another .Net Core Downastream API
 
-## Register the downstream web API (msal-react-downstream) ##
+## Register the downstream web API (msal-.net core-downstream) ##
 
 1. Navigate to the Azure portal and select the Azure AD service.
 2. Select the App Registrations blade on the left, then select New registration.
@@ -31,7 +31,7 @@ Select the Add scope button on the bottom to save this scope.
 Set accessTokenAcceptedVersion property to 2.
 Click on Save.
 
-## Configure the  downstream web API (msal-react-downstream) to use your app registration ##
+## Configure the  downstream web API (msal-.net core-downstream) to use your app registration ##
 
 Go to AppSettings.json file
 
@@ -39,7 +39,7 @@ Under Azure AD copy ClientID of msal-react-downstream app.
 Also Tenantid and Domain
 
 
-## Register the middle-tier web API (msal-react-middletier)
+## Register the middle-tier web API (msal-.net core-middletier)
 
 1. Navigate to the Azure portal and select the Azure AD service.
 2. Select the App Registrations blade on the left, then select New registration.
@@ -78,7 +78,7 @@ Select the Add scope button on the bottom to save this scope.
 Set accessTokenAcceptedVersion property to 2.
 Click on Save.
 
-## Configure the  downstream web API (msal-react-middletier) to use your app registration ##
+## Configure the  downstream web API (msal-.netcore-middletier) to use your app registration ##
 
 Go to AppSettings.json file
 
