@@ -4,7 +4,7 @@
 
 This sample demonstrates a React single-page application (SPA) calling .Net Core Web API which in turns calls another .Net Core Downastream API
 
-# Register the downstream web API (msal-react-downstream)
+## Register the downstream web API (msal-react-downstream) ##
 
 1. Navigate to the Azure portal and select the Azure AD service.
 2. Select the App Registrations blade on the left, then select New registration.
@@ -31,7 +31,15 @@ Select the Add scope button on the bottom to save this scope.
 Set accessTokenAcceptedVersion property to 2.
 Click on Save.
 
-# Register the middle-tier web API (msal-react-middletier)
+## Configure the  downstream web API (msal-react-downstream) to use your app registration ##
+
+Go to AppSettings.json file
+
+Under Azure AD copy ClientID of msal-react-downstream app.
+Also Tenantid and Domain
+
+
+## Register the middle-tier web API (msal-react-middletier)
 
 1. Navigate to the Azure portal and select the Azure AD service.
 2. Select the App Registrations blade on the left, then select New registration.
@@ -70,6 +78,19 @@ Select the Add scope button on the bottom to save this scope.
 Set accessTokenAcceptedVersion property to 2.
 Click on Save.
 
+## Configure the  downstream web API (msal-react-middletier) to use your app registration ##
+
+Go to AppSettings.json file
+
+Under Azure AD copy ClientID of msal-react-downstream app.
+Also Tenantid and Domain
+
+Under DownStreamAPI replace ScopeForAccessToken with
+
+{api://clientidofdownstreamapi/access_downstream_api_as_user}
+
+
+
 # Register the SPA app (msal-react-spa)
 1. Navigate to the Azure portal and select the Azure AD service.
 2. Select the App Registrations blade on the left, then select New registration.
@@ -87,4 +108,9 @@ In the list of APIs, select the API msal-react-middletier.
 In the Delegated permissions section, select the access_middletier_api_as_user in the list. Use the search box if necessary.
 Select the Add permissions button at the bottom.
 
+## Configure the  downstream web API (msal-react-spa) to use your app registration ##
 
+replace client id with clientId of msal-react-spa
+authority as {https://login.microsoftonline.com/tenantid}
+
+Under apiHello replace scope with api://{clientid of msal-react-middletier}/access_as_user 
