@@ -2,7 +2,7 @@
 
 # Scenario
 
-This sample demonstrates a React single-page application (SPA) calling .Net Core Web API which in turns calls another .Net Core Downastream API
+This sample demonstrates a React single-page application (SPA) calling .Net Core Web API which in turns calls another .Net Core Downstream API
 
 ## Register the downstream web API (msal-.net core-downstream) ##
 
