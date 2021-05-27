@@ -12,8 +12,8 @@ import { LogLevel } from "@azure/msal-browser";
  */
 export const msalConfig = {
     auth: {
-        clientId: "adddf072-0f8c-408a-8aaa-8ace5a521a3f", // This is the ONLY mandatory field that you need to supply.
-        authority: "https://login.microsoftonline.com/c5ffa990-0e0a-4bf6-9c04-79ab98e05931", // Defaults to "https://login.microsoftonline.com/common"
+        clientId: "", // This is the ONLY mandatory field that you need to supply.
+        authority: "https://login.microsoftonline.com/c5ffa990-0e0a-7bf6-9c04-79ab98e05931", // Defaults to "https://login.microsoftonline.com/common"
         redirectUri: "/", // You must register this URI on Azure Portal/App Registration. Defaults to window.location.origin
         postLogoutRedirectUri: "/", // Indicates the page to navigate after logout.
         navigateToLoginRequestUrl: false, // If "true", will navigate back to the original request location before processing the auth code response.
@@ -68,6 +68,6 @@ export const protectedResources = {
     },
     apiHello: {
         endpoint: "https://localhost:5001/weatherforecast",
-        scopes: ["api://43da8b3c-8743-4d6e-84b4-00fe04d93222/access_as_user"], // e.g. api://xxxxxx/access_as_user
+        scopes: ["api://43da8b3c-8743-4d6e-84b4-70fe04d93222/access_as_user"], // e.g. api://xxxxxx/access_as_user
     },
 }
